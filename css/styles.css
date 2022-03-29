@@ -4,6 +4,7 @@ body {
 
 .component-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -12,6 +13,7 @@ body {
 
 .component {
   display: flex;
+  flex-direction: row;
   width: 1000px;
   height: 370px;
   margin: 25px;
@@ -51,6 +53,7 @@ body {
 
 .component-stats {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 80%;
   margin-top: 32px;
@@ -83,10 +86,80 @@ body {
 }
 
 .img-overlay {
-  margin-top: -375px;
+  margin-top: -374px;
   width: 430px;
   height: 100%;
   border-radius: 0 8px 8px 0;
   background-color: hsl(277, 64%, 61%);
   opacity: 0.5;
+}
+
+@media (min-width: 982px) and (max-width: 1020px) {
+  .component-text .stat-number {
+    margin: 0;
+  }
+}
+
+@media (max-width: 982px) {
+  .component {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: auto;
+  }
+
+  .component-text {
+    align-items: center;
+    width: 90%;
+    padding: 40px 80px;
+  }
+
+  .component-text h2 {
+    font-size: 25px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .component-text p {
+    width: 85%;
+    margin-top: 0;
+  }
+
+  .component-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .component-text .stat-number {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .component-text .stat-text {
+    width: 100%;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .component-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .img-overlay {
+    margin-top: -204px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+  }
 }
